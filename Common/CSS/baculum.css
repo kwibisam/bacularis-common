@@ -1,0 +1,1127 @@
+body {
+	--text-color: black;
+	--bkg-color: #f1f1f1;
+	--color-strong: white;
+	--color-main: #4caf50;
+	--color-error: #f44336;
+	--color-warning: #ffffcc;
+	--color-function: #f1f1f1;
+	--anchor-color: black;
+	--bkg-color-modal: white;
+	--text-color-table-head: white;
+	--bkg-color-table-head: #4c4b4b;
+	--bkg-color-table-row-odd: white;
+	--bkg-color-table-row-even: #f1f1f1;
+	--bkg-color-table-row-hover: #ffcf9e;
+	--bkg-color-table-row-selected: #f5a55b;
+	--text-color-table-row-selected: black;
+	--bkg-color-dt-button: #e9e9e9;
+	--bkg-image-dt-button: linear-gradient(to bottom, white 0%, #e9e9e9 100%);
+	--text-color-dt-button: black;
+	--bkg-color-light-green: #8bc34a;
+	--bkg-color-tab-hover: #e7e7e7;
+	color-scheme: light;
+}
+
+body.dark-theme {
+	--text-color: #e5e5e5;
+	--bkg-color: #242424;
+	--color-strong: #0e0e0e;
+	--color-main: #364a89;
+	--color-error: #d33a2f;
+	--color-warning: #0e0e0e;
+	--color-function: #606060;
+	--anchor-color: #e5e5e5;
+	--bkg-color-modal: #242424;
+	--text-color-table-head: #e5e5e5;
+	--bkg-color-table-head: #181717;
+	--bkg-color-table-row-odd: #242424;
+	--bkg-color-table-row-even: #181717;
+	--bkg-color-table-row-hover: #606060;
+	--bkg-color-table-row-selected: #e5e5e5;
+	--text-color-table-row-selected: #181717;
+	--bkg-color-dt-button: #181717;
+	--bkg-image-dt-button: none;
+	--text-color-dt-button: white;
+	--bkg-color-light-green: #2d53cb;
+	--bkg-color-tab-hover: #606060;
+	color-scheme: dark;
+}
+
+body {
+	color: var(--text-color);
+	background-color: var(--bkg-color);
+}
+
+a {
+	color: var(--anchor-color);
+}
+
+.light-dark {
+	color: white !important;
+	background-color: #121212 !important;
+}
+
+.deep-dark {
+	color: white !important;
+	background-color: 'black' !important;
+}
+
+#page_main > header {
+	display: inline-block;
+	margin-top: 8px;
+}
+
+#sidebar, #quick_resource_edit, #quick_volume_edit {
+	color: var(--text-color);
+	background-color: var(--color-strong);
+}
+
+#jobs_summary_graph, #jobs_bytes_files_graph {
+	height: 310px;
+	max-width: 800px;
+	z-index: 0;
+	cursor: pointer;
+}
+
+#jobs_bytes_files_graph {
+	height: 250px;
+}
+
+.monospace {
+	font-family: "Courier New", Courier, monospace !important;
+}
+
+pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+a.w3-button:not(.w3-bar-item), button.w3-button:not(.w3-bar-item) {
+	border: 1px solid rgba(27, 31, 35, .15);
+	border-radius: 4px;
+	font-size: 14px;
+	transition: opacity 0s;
+}
+
+a.w3-button:active, button.w3-button:active {
+	opacity: 0.5;
+}
+
+table.dataTable {
+	font-size: 14px;
+	line-height: 1.2;
+	border: 1px solid #c1c1c1;
+}
+
+
+table.dataTable tr.odd,  .w3-striped tbody tr:nth-child(odd) {
+	background-color: var(--bkg-color-table-row-odd) !important;
+}
+
+table.dataTable tbody tr, table.dataTable tr.even, .w3-striped tbody tr:nth-child(even) {
+	background-color: var(--bkg-color-table-row-even) !important;
+}
+
+table.dataTable button.w3-button, table.dataTable a.w3-button {
+	font-size: 10px;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+	border-top: 1px solid #c1c1c1;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+	border-bottom: 1px solid #c1c1c1;
+}
+
+table.dataTable thead tr {
+	background-color: var(--bkg-color-table-head);
+	color: var(--text-color-table-head);
+}
+
+th, table.dataTable thead td {
+	border-bottom: none !important;
+}
+
+table.dataTable tbody td {
+	vertical-align: middle;
+}
+
+table.dataTable.no-footer {
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.dataTables_wrapper .dataTables_filter {
+	color: var(--text-color) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	color: black !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	border: 1px solid #4CAF50 !important;
+	background: var(--color-main) !important;
+	border: 1px solid var(--color-main) !important;
+	border-radius: unset !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+	background: none !important;
+	border: 1px solid var(--color-main) !important;
+	border-radius: unset !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:active, .dataTables_wrapper .dataTables_paginate .paginate_button.current:active {
+	border: 1px solid var(--color-main) !important;
+	box-shadow: none !important;
+}
+
+.dataTables_length {
+	margin-right: 5px !important;
+}
+
+.dataTables_wrapper select, div.dt-buttons .dt-button {
+	padding: .57em .5em !important;
+	border: 1px solid #999 !important;
+	border-radius: 2px !important;
+	color: var(--text-color-dt-button) !important;
+	background: var(--bkg-color-dt-button) var(--bkg-image-dt-button) !important;
+}
+
+div.dt-buttons .dt-button.active {
+	color: var(--text-color) !important;
+	background: var(--bkg-color) !important;
+}
+
+div.dt-button-info, div.dt-button-info h2 {
+	color: var(--text-color-dt-button) !important;
+	background: var(--bkg-color-dt-button) var(--bkg-image-dt-button) !important;
+}
+
+div.dt-button-collection {
+	background: var(--bkg-color-dt-button) !important;
+}
+
+div.dt-buttons .dt-button:nth-of-type(1), div.dt-buttons .dt-button:nth-of-type(2) {
+	padding: .6em .8em !important;
+}
+
+div.dt-buttons .dt-button:nth-of-type(3) {
+	padding: .6em .5em .46em .5em !important;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+	padding: 5px 7px;
+}
+
+#last_jobs_list tbody th, #last_jobs_list tbody td {
+	padding: 8px 7px;
+}
+
+table.dataTable tfoot th:nth-of-type(2), table.dataTable tfoot td:nth-of-type(2) {
+	padding: 10px 0 6px 6px !important;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+	padding: 10px 0 6px 0 !important;
+}
+
+
+table.dataTable.small_padding thead th, table.dataTable.small_padding thead td {
+	padding: 8px 1px;
+}
+
+table.dataTable.small_padding tbody th, table.dataTable.small_padding tbody td {
+	padding: 8px 1px;
+}
+
+/* Hide first default column in column visibility menu */
+div.dt-button-collection button[data-cv-idx="0"] {
+	display: none !important;
+}
+
+table.dataTable thead .sorting {
+	background-image: url("/themes/Baculum-v2/sort_both.png") !important;
+}
+table.dataTable thead .sorting_asc {
+	background-image: url("/themes/Baculum-v2/sort_asc.png") !important;
+}
+table.dataTable thead .sorting_desc {
+	background-image: url("/themes/Baculum-v2/sort_desc.png") !important;
+}
+table.dataTable thead .sorting_asc_disabled {
+	background-image: url("/themes/Baculum-v2/sort_asc_disabled.png") !important;
+}
+table.dataTable thead .sorting_desc_disabled {
+	background-image: url("/themes/Baculum-v2/sort_desc_disabled.png") !important;
+}
+
+.dataTables_info, .dataTables_paginate, .dataTables_length, .dataTables_wrapper .dataTables_paginate .paginate_button, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+	color: var(--text-color) !important;
+}
+
+.dataTables_info span.select-info {
+	margin-left: 10px;
+}
+
+table.selectable tr {
+	cursor: pointer;
+}
+
+img.btn_loader {
+	display: inline-block;
+	margin: 0 9px 0 10px;
+	width: 22px;
+	height: 22px;
+}
+
+div.table_toolbar {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 640px) {
+	div.table_toolbar {
+		display: block !important;
+		text-align: center;
+	}
+}
+
+div.table_toolbar select {
+	font-weight: bold;
+	padding: .57em .5em !important;
+	margin-left: 0.333em;
+	margin-right: 2px;
+}
+
+#table_filters {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#table_filters span.text {
+	font-size: 12px;
+}
+
+#table_filters input, span.text {
+	vertical-align: middle;
+	top: 0;
+}
+
+#table_filters_body {
+	border: 1px solid gray;
+	padding: 9px 13px;
+	border-radius: 4px;
+	position: relative;
+	top: -6px;
+}
+
+table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+	color: var(--text-color-table-row-selected);
+	background-color: var(--bkg-color-table-row-selected) !important;
+}
+
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover {
+	background-color: var(--bkg-color-table-row-hover) !important;
+}
+
+th.action_col, td.action_col, th.action_col_long, td.action_col_long {
+	width: 120px !important;
+	text-align: center !important;
+}
+
+td.action_col button, td.action_col_long button {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+td.action_col_long {
+	width: 200px !important;
+}
+
+.hide {
+        display: none !important;
+}
+
+img.reset_btn, img.remove_btn {
+        display: none;
+        cursor: pointer;
+        vertical-align: middle;
+}
+
+.w3-pale-yellow {
+	color: var(--text-color) !important;
+	background-color: var(--color-warning) !important;
+}
+
+.step {
+	/*width: 30% !important;*/
+	min-height: 100px;
+	border-radius: 4px;
+}
+
+.step_title {
+	clear: left;
+}
+
+.step.w3-light-green {
+	background-color: var(--bkg-color-light-green) !important;
+}
+
+div.opentip, div.opentip-container canvas {
+	width: 370px !important;
+}
+
+div.opentip div.ot-header h1 {
+	font-size: 14px !important;
+	font-weight: bold;
+}
+
+div.opentip div.ot-content {
+	padding: 5px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+div.TDatePicker_default {
+	z-index: 10 !important;
+	background-color: var(--color-strong) !important;
+}
+
+i.directive_required {
+	line-height: 40px;
+}
+
+i.help_icon {
+	 margin-left: 16px !important;
+	 cursor: pointer;
+}
+i.reset_btn, i.remove_btn {
+	display: none;
+	cursor: pointer;
+	margin-left: 4px;
+}
+i.plus_btn {
+	margin-right: 2px;
+}
+
+div.directive_value i {
+	vertical-align: middle;
+}
+
+div.directive_value:hover i.reset_btn, div.directive_value:hover i.remove_btn {
+	display: inline;
+}
+
+div.directive_field {
+	margin: 7px 0;
+}
+
+div.directive_field input, div.directive_field select, div.directive_field textarea {
+	max-width: 400px;
+}
+div.directive_field input.w3-half, div.directive_field select.w3-half, div.directive_field textarea.w3-half {
+	max-width: 200px;
+}
+div.directive_field input.w3-quarter, div.directive_field select.w3-quarter, div.directive_field textarea.w3-quarter {
+	max-width: 100px;
+}
+
+.view_header {
+	margin: 0 0 2px 16px;
+}
+
+div.details_card {
+	min-height: 200px;
+}
+
+@media screen and (max-width: 620px) {
+	div.details_card {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 621px) {
+	div.details_card {
+		width: 270px;
+	}
+}
+
+div.details_card_long {
+	min-height: 190px;
+}
+
+@media screen and (max-width: 620px) {
+	div.details_card_long {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 621px) {
+	div.details_card_long {
+		width: 330px;
+	}
+}
+
+.button_fixed {
+	min-width: 125px;
+}
+
+div.config_directives {
+	padding: 10px;
+}
+
+div.config_loader {
+	width: 100%;
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#last_jobs_list tbody tr {
+	cursor: pointer;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.fileset_browser_file_container, .fileset_browser_include_container, .fileset_browser_exclude_container {
+	width: 50%;
+	overflow-y: auto;
+	overflow-x: none;
+	background-color: var(--color-strong);
+	padding: 0;
+	height: 384px;
+}
+
+.fileset_browser_include_container {
+	height: 150px;
+}
+
+.fileset_browser_exclude_container {
+	height: 162px;
+}
+
+.item {
+	cursor: pointer;
+	clear: left;
+	height: 30px;
+}
+
+.item a {
+	text-decoration: underline;
+}
+
+.item i {
+	float: left;
+}
+
+.item, .item_included, .item_excluded {
+	padding: 4px 0 4px 4px;
+	background-color: transparent;
+}
+
+.item_included, .item_excluded {
+	width: 100%;
+}
+
+.item:hover, .item_included:hover, .item_excluded:hover {
+	width: 100%;
+	height: 30px;
+	background-color: var(--bkg-color-tab-hover);
+}
+
+.item_inc_exc_btn {
+	display: inline-block;
+	float: right;
+	margin-left: 5px;
+}
+
+.item_selected_del_btn {
+	float: right;
+	margin: 2px 10px;
+	cursor: pointer;
+}
+
+.item_name {
+	width: 69%;
+	float: left;
+	padding-left: 5px;
+}
+
+.item_icon {
+	font-size: 24px;
+	vertical-align: bottom;
+}
+
+ul.new_element_menu {
+	margin-top: 0;
+	padding-left: 0;
+	padding-top: 8px
+}
+
+ul.new_element_menu li {
+	padding: 2px 16px;
+}
+
+ul.new_element_menu li a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+table.status_table tr {
+	height: 40px;
+}
+
+table.status_table td:nth-of-type(1) {
+	width: 35%;
+}
+
+table.status_table td, table.status_table td i {
+	vertical-align: middle;
+}
+
+.fa-ellipsis-v {
+	padding: 10px 15px;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+.fa-ellipsis-v:hover {
+	background-color: #efeff0;
+}
+
+.progressbar {
+	position: relative;
+}
+
+.progressbar-label {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 4px;
+	font-weight: bold;
+}
+
+.smallbox {
+	width: 160px;
+}
+
+.xtinybox {
+	width: 65px !important;
+}
+
+a.raw {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.option_cell {
+	width: 330px;
+}
+
+.resource:hover, .component:hover {
+	background-color: #faedd5;
+}
+
+table.component td:nth-of-type(1) {
+	line-height: 23px;
+	vertical-align: sub;
+	padding-top: 11px;
+}
+
+.bottom_buttons {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 5px 0;
+	min-height: 48px;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 100%;
+}
+
+.bottom_buttons a, .bottom_buttons button {
+	margin: 0 3px;
+}
+
+.usage_box {
+	height: 79px;
+	-webkit-transition: height 0.3s; /* For Safari 3.1 to 6.0 */
+	transition: height 0.3s;
+	border-radius: 5px;
+}
+
+@media (max-width:600px) {
+	.usage_box {
+		border-radius: 0;
+	}
+}
+
+.usage_box:hover {
+	height: 140px;
+}
+
+.usage_box h5 {
+	margin-top: 5px;
+	margin-left: 47px;
+}
+
+.usage_box h4 {
+	margin-top: 1px;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: normal;
+}
+
+.info {
+	color: var(--text-color) !important;
+}
+
+.error {
+	color: red;
+}
+
+/* Option row */
+.opt_row {
+	line-height: 36px;
+}
+
+/* Required option */
+.opt_req {
+	line-height: 40px;
+	display: inline;
+	margin-left: 2px;
+}
+
+.field_invalid {
+	border: 1px solid red !important;
+}
+
+#job_graph_container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#job_graph_container > div {
+	width: 420px;
+	margin: 10px;
+}
+
+.gauge, .gauge_container {
+	width: 300px;
+	height: 150px;
+}
+
+.gauge_label {
+	display: inline-block;
+	position: relative;
+	top: -44px;
+	left: 122px;
+}
+
+.device_colinfo, .job_colinfo {
+	display: none;
+}
+
+.status_header, .device_columns {
+	padding: 5px;
+	font-size: 17px;
+	margin: 3px 0;
+	display: flex;
+}
+
+.device_columns > div {
+	text-align: center;
+	font-weight: bold;
+}
+
+
+.status_header {
+	cursor: pointer;
+	border: 1px solid #dddddd;
+}
+
+.status_header:hover {
+	background-color: var(--bkg-color-tab-hover);
+	border-radius: 3px;
+}
+
+.status_header > div, .device_columns > div {
+	flex-basis: 385px;
+}
+
+.status_header.schedule > div {
+	flex-basis: 300px;
+}
+
+#status_storage_filters select {
+	width: 250px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+@media only screen and (max-width: 670px) {
+	.gauge, .gauge_container {
+		width: 150px;
+		height: 75px;
+	}
+
+	.gauge_label {
+		top: -19px;
+		left: 45px;
+	}
+	.status_header {
+		flex-wrap: wrap;
+	}
+	.device_columns {
+		display: none;
+	}
+	.device_colinfo, .job_colinfo {
+		display: inline;
+	}
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+.blink {
+  animation: blinker 4s linear infinite;
+}
+
+img.job_weather_icon {
+	display: block;
+	margin: 0 auto;
+	height: 32px;
+	width: 32px;
+	cursor: help;
+}
+
+/* API server OAuth2 progress bar */
+
+#progress_label {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+}
+
+/* STATUS type classes */
+.status_flex_row {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.status_flex_row > div {
+	flex-basis: 185px;
+	height: 28px;
+}
+
+/* Schedule setting */
+.day_of_month, .week_of_month, .week_of_year {
+	width: 14px;
+}
+
+div.directive_help dt, div.directive_help dd {
+	color: var(--text-color);
+}
+
+div.directive_help dt {
+	padding: 5px;
+}
+
+div.directive_help dd {
+	margin-inline-start: 20px;
+}
+
+/* Reports */
+#job_history_report_table th:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+	/* to have fixed day column width in job report */
+	max-width: 38px;
+	width: 38px;
+}
+
+/* Switch button */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch.small {
+	width: 52px;
+	height: 25px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider.small:before {
+	width: 17px;
+	height: 17px;
+}
+
+input:checked + .slider {
+	background-color: var(--color-main);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px var(--color-main);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+.w3-show-small {
+	display: none;
+}
+@media (max-width:600px) {
+	.w3-show-small {
+		display: initial;
+	}
+}
+
+.w3-modal-content {
+	background-color: var(--bkg-color-modal) !important;
+}
+
+.w3-card {
+	background-color: var(--color-strong);
+}
+
+.w3-code {
+	border-left: 4px solid var(--color-main);
+	background-color: var(--color-strong);
+}
+
+.w3-green, .w3-blue {
+	background-color: var(--color-main) !important;
+}
+
+.w3-text-green:not(.fa-check-square) {
+	color: var(--color-main) !important;
+}
+
+.w3-red {
+	background-color: var(--color-error) !important;
+}
+
+.w3-text-red {
+	color: var(--color-error) !important;
+}
+
+.w3-light-gray {
+	background-color: var(--color-function) !important;
+}
+
+.subtab_btn:hover {
+	background-color: var(--bkg-color-tab-hover) !important;
+}
+
+/** START Progress bar **/
+.ui-widget-header {
+	background: var(--color-main) !important;
+}
+
+.ui-progressbar .ui-progressbar-value {
+	margin: 0 !important;
+}
+
+.ui-widget-content {
+	color: var(--text-color);
+	background-color: var(--color-strong);
+}
+/** END Progress bar **/
+
+/** START Wizards **/
+
+#restore-browser {
+	width: 100%;
+}
+
+#restore-browser td {
+	width: 45%;
+}
+
+#restore-browser-files, #restore-browser-versions, #restore-browser-selected {
+	overflow: auto;
+	width: 100%;
+	height: 100% !important;
+	background-color: var(--color-strong);
+}
+
+#restore-browser-files {
+	height: calc(100% - 57px) !important;
+	overflow-x: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	#restore-browser-files {
+		/* On small devices bottom toolbar with search, offset and limit is not displayed */
+		height: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 1650px) {
+	.offset_limit {
+		display: none;
+	}
+}
+
+#restore-browser-files-loading {
+	position: absolute;
+	z-index: 10;
+}
+#restore-browser-files-loading i {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: var(--color-main);
+}
+
+#restore-browser-files-content, #restore-browser-files-content-flat {
+	position: relative;
+	height: 100%;
+}
+
+.file-browser-detail {
+	width: 100%;
+}
+
+div.file-browser-element {
+	cursor: pointer;
+	padding: 4px 8px;
+	clear: both;
+}
+
+.restore-browser-element-right {
+	float: right;
+	width: 137px;
+}
+
+.restore-browser-element-right {
+	line-height: 24px;
+}
+
+#restore-browser-files-content-tree ul {
+	padding-left: 14px;
+	list-style-type: none;
+	margin: 0;
+}
+
+#restore-browser-files-content-tree > ul {
+	padding: 0;
+}
+
+li.file-browser-element {
+	padding: 1px 0;
+	cursor: pointer;
+}
+
+li.file-browser-element > div {
+	padding: 1px 8px;
+}
+
+li.file-browser-element > div:hover, div.file-browser-element:hover {
+	background-color: var(--bkg-color-tab-hover);
+}
+
+.file-browser-watermark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 21px;
+	color: rgb(185, 184, 184);
+}
+
+a.remove_selected_item {
+	padding-top: 2px;
+}
+
+#backup-to-restore-field > div {
+	height: 467px;
+	overflow-y: auto;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* Overwrite jQuery-UI draggable class to solve problem with
+ * scrolling file list on mobile devices
+ */
+.ui-draggable-handle {
+    touch-action: auto !important;
+}
+
+/** END Wizards **/

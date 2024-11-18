@@ -1,0 +1,9 @@
+.php-cs-fixer.cache
+./protected
+./protected/vendor/
+
+protected/
+protected/vendor/
+./protected/*
+
+./protected/vendor/*
